@@ -7,7 +7,7 @@ public class Field {
 	private FieldColors color;
 	
 	public Field(FieldColors color) {
-		this.color = color;
+		setColor(color);
 	}
 	
 	public FieldColors getColor() {
@@ -15,7 +15,11 @@ public class Field {
 	}
 	
 	public void setColor(FieldColors color) {
-		this.color = color;
+		if(color == null){
+			this.color = FieldColors.WHITE;
+		} else {
+			this.color = color;
+		}
 	}
 
 }

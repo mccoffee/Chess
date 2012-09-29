@@ -9,10 +9,14 @@ public class FieldTest {
 
 	@Test
 	public void instantiateTest() {
-		Field field = new Field(game.Field.FieldColors.BLACK);
-		assertEquals(game.Field.FieldColors.BLACK, field.getColor());
+		Field field = new Field(FieldColors.BLACK);
+		assertEquals(FieldColors.BLACK, field.getColor());
 		field.setColor(FieldColors.WHITE);
 		assertEquals(FieldColors.WHITE, field.getColor());
+		field.setColor(null);
+		assertEquals(FieldColors.WHITE, field.getColor());
+		Field field2 = new Field(null);
+		assertEquals(FieldColors.WHITE, field2.getColor());
 	}
 
 }
